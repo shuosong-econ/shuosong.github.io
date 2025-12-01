@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuo Song | Economics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#F3F4F6',
+                        accent: '#06B6D4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-secondary text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">
+                SHUO<span class="text-primary">.IO</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="nav-link text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+                <a href="#research"
+                    class="nav-link text-gray-700 hover:text-primary font-medium transition-colors">Research</a>
+                <a href="#gallery"
+                    class="nav-link text-gray-700 hover:text-primary font-medium transition-colors">Gallery</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#hero" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="#research" class="block py-2 text-gray-700 hover:text-primary">Research</a>
+                <a href="#gallery" class="block py-2 text-gray-700 hover:text-primary">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Text Content -->
+            <div class="hero-text order-2 md:order-1 opacity-0 translate-y-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+                    Economics PhD Candidate
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                    Hi, I'm <span class="text-primary">Shuo</span>.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg text-justify">
+                    My name is Shuo Song. I am a PhD student at the Toulouse School of Economics, France. My research
+                    interests lie in
+                    Empirical Industrial Organization.
+                    My current work focuses on the IO of GenAI. Specifically, I study the competition among LLMs
+                    and the associated infrastructure sectors,
+                    such as semiconductors and energy.<br><br>
+                    Prior to joining TSE, I obtained my Bachelor's degree from the Wang Yanan Institute for Studies in
+                    Economics (WISE) at Xiamen University, China.
+                    Outside of economics, I cultivate interests in photography and the history of Ming Empire
+                    (1368-1644).<br><br>
+                    My favorite poet is XIN Qiji.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#research"
+                        class="px-8 py-3 bg-primary text-white rounded-full font-medium hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        View Research
+                    </a>
+                    <a href="mailto:shuo.song@tse-fr.eu"
+                        class="px-8 py-3 bg-white text-gray-900 border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="hero-visual order-1 md:order-2 flex justify-center opacity-0 scale-90">
+                <div class="relative w-64 h-64 md:w-96 md:h-96">
+                    <div
+                        class="absolute inset-0 bg-accent/20 rounded-[2rem] transform rotate-6 blur-xl animate-pulse-slow">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/20 rounded-[2rem] transform -rotate-6 blur-xl animate-pulse-slow delay-75">
+                    </div>
+                    <img src="figures/photo2.jpg" alt="Shuo Song"
+                        class="relative w-full h-full object-cover rounded-[2rem] shadow-2xl border-4 border-white z-10" />
+
+                    <!-- Floating Badge -->
+                    <div class="floating-badge absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-ping-slow"></div>
+                            <span class="text-sm font-medium text-gray-700">Open to Talk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
+            <i data-lucide="arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-16 opacity-0 translate-y-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Research</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Paper 1 -->
+                <div
+                    class="paper-card bg-secondary p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all group opacity-0 translate-y-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-blue-50 text-blue-600">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">In Progress</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        Arena: Competition Dynamics in the LLMs Market.
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4 italic">Shuo Song</p>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        None.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-medium hover:text-indigo-700 transition-colors">
+                        Draft Coming Soon <i data-lucide="arrow-right"
+                            class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Paper 2 -->
+                <div
+                    class="paper-card bg-secondary p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all group opacity-0 translate-y-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-blue-50 text-blue-600">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">In Progress</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        Who Snatched Your Deal: AI Race and Memory Device Market.
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4 italic">Shuo Song</p>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        None.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-medium hover:text-indigo-700 transition-colors">
+                        Draft Coming Soon <i data-lucide="arrow-right"
+                            class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Paper 3 -->
+                <div
+                    class="paper-card bg-secondary p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all group opacity-0 translate-y-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-orange-50 text-orange-600">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <!--
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">In Progress</span>
+                        -->
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        More to come...
+                    </h3>
+                    <!--
+                    <p class="text-sm text-gray-500 mb-4 italic">Shuo Song</p>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        More to come...
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-medium hover:text-indigo-700 transition-colors">
+                        Draft Coming Soon <i data-lucide="arrow-right"
+                            class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-16 opacity-0 translate-y-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gallery</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Capturing moments from my travels and daily life.
+                </p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                <!-- Photo 1 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/Toulouse.jpg" alt="Toulouse"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">La Garonne, Toulouse</span>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/Najac.jpg" alt="Najac"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Najac</span>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/xmas.jpg" alt="Le Capitole, Toulouse"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Le Capitole, Toulouse</span>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/TSE.jpg" alt="TSE"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">TSE</span>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/Qingdao.JPG" alt="Tsingtao"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Tsingtao</span>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/westlake.jpg" alt="West Lake, Hangzhou"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">West Lake, Hangzhou</span>
+                    </div>
+                </div>
+
+                <!-- Photo 7 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/yuewang.jpg" alt="Yuewang Temple, Hangzhou"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Yuewang Temple, Hangzhou</span>
+                    </div>
+                </div>
+
+                <!-- Photo 8 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/wukong.jpg" alt="Wukong"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Black Myth: Wukong</span>
+                    </div>
+                </div>
+
+                <!-- Photo 9 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/albi.jpg" alt="Albi"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Cathédrale Sainte-Cécile d'Albi</span>
+                    </div>
+                </div>
+
+                <!-- Photo 10 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/nice.jpg" alt="Nice"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Nice</span>
+                    </div>
+                </div>
+
+                <!-- Photo 11 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/antibes.jpg" alt="Antibes"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Antibes</span>
+                    </div>
+                </div>
+
+                <!-- Photo 12 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/monaco.jpg" alt="Monaco"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Monaco</span>
+                    </div>
+                </div>
+
+                <!-- Photo 13 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/cannes.jpg" alt="Cannes"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Cannes</span>
+                    </div>
+                </div>
+
+                <!-- Photo 14 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/collioure.jpg" alt="Collioure"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Collioure</span>
+                    </div>
+                </div>
+
+                <!-- Photo 15 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/xmu.jpeg" alt="Xiamen University"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Xiamen University</span>
+                    </div>
+                </div>
+
+                <!-- Photo 16 -->
+                <div
+                    class="photo-item break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                    <img src="figures/plane.jpg" alt="Light Painting"
+                        class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-white font-medium text-lg">Light Painting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-gray-500 text-sm">
+                    © 2025 Shuo Song. All rights reserved.
+                </p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                        data-lucide="linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
